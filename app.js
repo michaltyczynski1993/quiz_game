@@ -1,63 +1,53 @@
-// Refaktoryzacja:
 import { questions } from "./questions.js";
 
 // selectors
 const buttons = document.getElementsByTagName('button');
 const questionText = document.getElementById('question');
+const scoreText = document.getElementById('score');
 
 // variables
 let score = 0;
-let gameOver = false;
 let questionNum = 0;
-let correctAnswer;  // dodano zmienną przechowującą poprawną odpowiedź 
+let correctAnswer;
 
-//pokaż pytanie 
+function handleButtonClick() {
+    checkAnswer(this);
+}
+// show question 
 const showQuestion = () => {
     const question = questions[questionNum];
 
     // show current question 
     questionText.innerHTML = question.question;
 
-    // show possible replies and set correct answer  // dodano ustawienie poprawnej odpowiedzi  
-    for (let i = 0; i < buttons.length; i++) {
+    // set correct answer and show possible replies
+    correctAnswer = question.correctAnswer;
+    const buttonsCount = buttons.length;
+    for (let i = 0; i < buttonsCount; i++) {
         const button = buttons[i];
 
         button.innerHTML = question.replies[i];
-
-        if (question.replies[i] === question.correctAnswer) {   // dodano sprawdzenie, która odpowiedź jest poprawna  
-            correctAnswer = button.innerHTML;   // jeśli odpowiedź jest poprawna, zapisz ją w zmiennej  
-
-            button.addEventListener('click', () => checkAnswer(button));   // wywołanie funkcji checkAnswer przekazując do niej tylko przycisk, a nie odpowiedź  
-
-        } else {   // jeśli odpowiedź jest błędna, dla każdego przycisku ustaw event listener na sprawdzenie odpowiedzi  
-
-            button.addEventListener('click', () => checkAnswer(button));   // wywołanie funkcji checkAnswer przekazując do niej tylko przycisk, a nie odpowiedź    
-
-        }
-
+        button.addEventListener("click", handleButtonClick);
     }
-
 }
 
-const checkAnswer = (button) => {   // zmieniono argumenty funkcji na tylko jeden - przycisk, który został kliknięty    
-
-    if (button.innerHTML == correctAnswer) {   // sprawdzenie czy wartość innerHTML danego przycisku równa się wartości zapisanej w zmiennej correctAnswer    
-
+const checkAnswer = (button) => {
+    if (button.innerHTML === correctAnswer) {
         alert('Correct pick!');
+        score++;
+        questionNum++;
         nextQuestion();
-
     }
 }
 
 const nextQuestion = () => {
-    questionNum++;
-    score++;
-    if (questionNum < questions.length) {
-        // wyświetl kolejne pytanie
+    if (questionNum <= questions.length - 1) {
+        // display next question
         showQuestion();
     } else {
-        // koniec gry
+        // end game
         alert(`Koniec gry! Twój wynik to: ${score}`);
+        scoreText.innerHTML = `Score: ${score}`;
     }
 }
 
