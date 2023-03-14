@@ -16,7 +16,7 @@ function handleButtonClick() {
 // show question 
 const showQuestion = () => {
     const question = questions[questionNum];
-
+    scoreText.innerHTML = `Score: ${score}`;
     // show current question 
     questionText.innerHTML = question.question;
 
@@ -37,6 +37,9 @@ const checkAnswer = (button) => {
         score++;
         questionNum++;
         nextQuestion();
+    } else {
+        endGameMessage();
+        location.reload();
     }
 }
 
@@ -46,9 +49,14 @@ const nextQuestion = () => {
         showQuestion();
     } else {
         // end game
-        alert(`Koniec gry! Twój wynik to: ${score}`);
-        scoreText.innerHTML = `Score: ${score}`;
+        endGameMessage();
+
     }
+}
+
+const endGameMessage = () => {
+    alert(`Koniec gry! Twój wynik to: ${score}`);
+    scoreText.innerHTML = `Score: ${score}`;
 }
 
 showQuestion();

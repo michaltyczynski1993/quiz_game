@@ -5,11 +5,13 @@
 
 body {
     height: 100vh;
+    background-color: #242A40;
+    color: white;
 }
 
 header {
     padding: 1rem;
-    background-color: aqua;
+    background-color: #2E4159;
 }
 
 main {
@@ -35,6 +37,11 @@ main {
 button {
     margin: 0.7rem 0;
     width: 90%;
+    padding: 0.8rem 0;
+    background-color: #CCDDE7;
+    border: none;
+    border-radius: 1rem;
+
 }
 
 h4 {
