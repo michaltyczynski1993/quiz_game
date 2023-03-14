@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    padding: 1rem;
+    padding: 1.2rem;
     background-color: #2E4159;
 }
 
@@ -44,7 +44,35 @@ button {
 
 }
 
+button:hover {
+    background-color: #c1d1da;
+}
+
 h4 {
     text-align: justify;
     margin-bottom: 1rem;
+}
+
+@media(min-width: 700px) {
+    body {
+        font-size: 1.5rem;
+    }
+
+    button {
+        width: 70%;
+        padding: 1rem;
+        font-size: 1.3rem;
+    }
+}
+
+@media(min-width: 1000px) {
+    body {
+        font-size: 1.7rem;
+    }
+
+    button {
+        width: 60%;
+        padding: 1.2rem;
+        font-size: 1rem;
+    }
 }
