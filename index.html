@@ -18,19 +18,19 @@
         </div>
     </header>
     <main>
-        <div class="container align">
+        <div class="container align" id="container">
             <h4 id="question">Choose your category</h4>
-            <button>
+            <button onclick="setCategory('business')">
                 <i class="fas fa-briefcase fa-4x"></i>
                 <br>
                 Business
             </button>
-            <button>
+            <button onclick="setCategory('sport')">
                 <i class="fas fa-volleyball-ball fa-4x"></i>
                 <br>
                 Sport
             </button>
-            <button>
+            <button onclick="setCategory('film')">
                 <i class="fas fa-film fa-4x"></i>
                 <br>
                 Film
@@ -39,6 +39,7 @@
     </main>
 
     <!-- JS files -->
+    <script src="js/storage.js"></script>
 </body>
 
 </html>
