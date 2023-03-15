@@ -1,0 +1,29 @@
+button {
+    margin: 0.7rem 0;
+    width: 90%;
+    padding: 0.8rem 0;
+    background-color: #CCDDE7;
+    border: none;
+    border-radius: 1rem;
+
+}
+
+button:hover {
+    background-color: #c1d1da;
+}
+
+@media(min-width: 700px) {
+    button {
+        width: 70%;
+        padding: 1rem;
+        font-size: 1.3rem;
+    }
+}
+
+@media(min-width: 1000px) {
+    button {
+        width: 60%;
+        padding: 1.2rem;
+        font-size: 1rem;
+    }
+}

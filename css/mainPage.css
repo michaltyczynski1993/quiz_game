@@ -1,0 +1,12 @@
+button {
+    padding: 2rem 3rem;
+    background-color: #FAB502;
+    margin: 0.4rem 0;
+    color: rgb(41, 41, 41);
+    border: none;
+    border-radius: 2rem;
+}
+
+button:hover {
+    background-color: #d79b02;
+}
