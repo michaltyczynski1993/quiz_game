@@ -10,7 +10,8 @@ function startQuizButton() {
     const container = document.getElementById('container'); // Assigns the HTML container element to a variable.
     const newButton = document.createElement('button');
     newButton.innerHTML = 'Start Quiz'; // Creating text for new button.
-    newButton.style.backgroundColor = 'green'; // Seting background to green color.
+    newButton.style.backgroundColor = '#96ED15'; // Seting background to green color.
+
     newButton.addEventListener('click', function () {
         window.location.href = 'questionPage.html';
     }); //make a EcentListener to move player to another page = start a quiz

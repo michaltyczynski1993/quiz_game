@@ -1,5 +1,6 @@
 import { Question } from "./questionModel.js"
-export const questions = [
+
+export const sport = [
     new Question('Jakie jest największe państwo na świecie pod względem powierzchni?',
         ['Rosja', 'Kanada', 'Stany Zjednoczone', 'Chiny'], 'Rosja'),
     new Question('Które miasto jest stolicą Włoch?',
@@ -22,3 +23,5 @@ export const questions = [
     new Question('Turniej Czterech Skoczni - jaka to dyscyplina?',
         ['Zawody lekkoatletyczne', 'Impreza wspinaczkowa', 'Konkurs skoków narciarskich', 'Regularny sezon gier PC'], 'Konkurs skoków narciarskich'),
 ]
+
+export const business = []
