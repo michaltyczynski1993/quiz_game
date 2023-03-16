@@ -24,4 +24,25 @@ export const sport = [
         ['Zawody lekkoatletyczne', 'Impreza wspinaczkowa', 'Konkurs skoków narciarskich', 'Regularny sezon gier PC'], 'Konkurs skoków narciarskich'),
 ]
 
-export const business = []
+export const business = [
+    new Question('Co oznacza skrót KPI w biznesie?',
+        ['Key Performance Indicator', 'Keep People Informed', 'Know-How of Product Information', 'Kindly Provide Insight'], 'Key Performance Indicator'),
+    new Question('W którym roku została założona firma Apple?',
+        ['1976', '1984', '1995', '2003'], '1976'),
+    new Question('Co oznacza skrót ROI w biznesie?',
+        ['Return On Investment', 'Rate Of Interest', 'Revenue Of Income', 'Readiness Of Investment'], 'Return On Investment'),
+    new Question('Która firma jest największym sprzedawcą książek na świecie?',
+        ['Amazon', 'Alibaba', 'Walmart', 'Tesco'], 'Amazon'),
+    new Question('Jak nazywa się proces planowania, wdrażania i kontroli operacji marketingowych?',
+        ['Strategia marketingowa', 'Marketing szeptany', 'Reklama', 'Kampania marketingowa'], 'Kampania marketingowa'),
+    new Question('Co oznacza skrót USP w biznesie?',
+        ['Unique Selling Point', 'Universal Sales Platform', 'Ultimate Sales Pitch', 'Unique Service Profit'], 'Unique Selling Point'),
+    new Question('Która firma zajmuje się produkcją samochodów elektrycznych?',
+        ['Tesla', 'Ford', 'BMW', 'Toyota'], 'Tesla'),
+    new Question('Jak nazywa się model biznesowy polegający na wynajmowaniu produktów zamiast ich kupowania?',
+        ['Sharing economy', 'Traditional economy', 'Consumption economy', 'Ownership economy'], 'Sharing economy'),
+    new Question('aka jest nazwa podręcznego urządzenia przenośnego, które umożliwia bezprzewodowe połączenie z Internetem?',
+        ['Router', 'Modem', 'Switch', 'Access point'], 'Router'),
+    new Question('Co oznacza skrót CRM w biznesie?',
+        ['Customer Relationship Management', 'Commercial Retail Market', 'Creative Resource Management', 'Business Development Software'], 'Customer Relationship Management'),
+]

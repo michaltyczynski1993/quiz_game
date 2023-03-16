@@ -11,10 +11,10 @@ let questionNum = 0;
 let correctAnswer;
 
 function checkCategory() {
-    // określ jaka kategoria została wybrana
+    // get category saved in localstorage
     const category = localStorage.getItem('category');
 
-    //switch jeżeli jest odpowiedni numer to zostaje przypisana do zmiennej questions odpowiednia pula pytań
+    //switch if category is equal specific string it returns question stack
     switch (category) {
         case 'sport':
             return sport;
@@ -56,7 +56,6 @@ const checkAnswer = (button) => {
         nextQuestion();
     } else {
         endGameMessage();
-        location.reload();
     }
 }
 
@@ -75,5 +74,8 @@ const nextQuestion = () => {
 const endGameMessage = () => {
     alert(`Koniec gry! Twój wynik to: ${score}`);
     scoreText.innerHTML = `Score: ${score}`;
+    setTimeout(function () {
+        window.location.href = "index.html";
+    }, 2000);
 }
 showQuestion();
